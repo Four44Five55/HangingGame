@@ -18,10 +18,17 @@ public class EnterConsole {
 
     public char getConsole() {
         sc = new Scanner(System.in);
+
         readWord = sc.nextLine();
-        char[] temp = readWord.toCharArray();
-        tempWord = temp[0];
-        return tempWord;
+        if (readWord.length()!=0){
+            char[] temp = readWord.toCharArray();
+            tempWord = temp[0];
+            return tempWord;
+        }
+        else{
+            return Character.MIN_VALUE;
+        }
+
     }
 
 }
