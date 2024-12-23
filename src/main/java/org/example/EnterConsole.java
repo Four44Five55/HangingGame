@@ -20,12 +20,11 @@ public class EnterConsole {
         sc = new Scanner(System.in);
 
         readWord = sc.nextLine();
-        if (readWord.length()!=0){
+        if (readWord.length() != 0) {
             char[] temp = readWord.toCharArray();
             tempWord = temp[0];
             return tempWord;
-        }
-        else{
+        } else {
             return Character.MIN_VALUE;
         }
 

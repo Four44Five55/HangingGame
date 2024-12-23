@@ -7,7 +7,7 @@ import static org.example.RandomReading.*;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         boolean statusGame = true;
         PrintHanging printHanging = new PrintHanging();
