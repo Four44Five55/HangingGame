@@ -27,10 +27,10 @@ public class Main {
             System.out.println("Выбор буквы за тобой. Игра началась!");
             for (int i = 1; i <= word.getLength(); i++) {
                 if (word.getCounterMistakes() != 6 & !word.successfulGame()) {
-                    word.checkingForCharacter(enterConsole.getConsole());
+                    char tempChar = enterConsole.getConsole();
+                    word.checkingForCharacter(tempChar);
                     printHanging.printMan(word.getCounterMistakes(), word.getArrayMaskWord());
                     i--;
-
                 } else {
                     if (word.successfulGame()) {
                         System.out.println("Ты победил! Сыграем еще раз? (д/н)");

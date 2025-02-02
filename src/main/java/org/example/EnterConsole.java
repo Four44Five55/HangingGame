@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EnterConsole {
     char tempWord;
-    Scanner sc;
+    Scanner sc = new Scanner(System.in);
     String readWord;
 
     public EnterConsole() {
@@ -16,8 +16,14 @@ public class EnterConsole {
         this.readWord = readWord;
     }
 
+    public boolean isCyrillic(char ch) {
+        return (ch >= 'а' && ch <= 'я') ||
+                (ch >= 'А' && ch <= 'Я');
+
+    }
+
     public char getConsole() {
-        sc = new Scanner(System.in);
+        //sc = new Scanner(System.in);
 
         readWord = sc.nextLine();
         if (readWord.length() != 0) {
